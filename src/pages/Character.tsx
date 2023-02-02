@@ -15,7 +15,7 @@ interface CharacterData {
 
 export const Character: React.FC = () => {
     const { data, error } = useSWR<CharacterData>(rickAndMortyCharacter, fetchRickAndMorty, {
-        suspense: true,
+        suspense: false,
     });
 
     return (

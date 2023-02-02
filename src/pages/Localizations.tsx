@@ -14,7 +14,7 @@ interface LocalizationsData {
 
 export const Localizations: React.FC = () => {
     const { data, error } = useSWR<LocalizationsData>(rickAndMortyLocalizations, fetchRickAndMorty, {
-        suspense: true,
+        suspense: false,
     });
 
     return (
