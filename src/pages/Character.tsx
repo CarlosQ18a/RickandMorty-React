@@ -8,7 +8,7 @@ interface CharacterData {
     results: Array<{
         id: number;
         name: string;
-        image?:string
+        image:string
         species:string
     }>;
 }

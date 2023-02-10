@@ -7,7 +7,7 @@ import styles from './character.module.css'
 interface LocalizationsData {
     results: Array<{
         id: number;
-        name: number;
+        name: string;
         type:string
     }>;
 }

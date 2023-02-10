@@ -6,7 +6,7 @@ const { Meta } = Card;
 
 type CardType = {
     name:string,
-    image:string,
+    image?:string,
     description:string
 }
 
