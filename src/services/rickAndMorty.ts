@@ -1,21 +1,20 @@
-export const rickAndMortyCharacter = 'https://rickandmortyapi.com/api/character'
-export const rickAndMortyLocalizations = 'https://rickandmortyapi.com/api/location'
-export const rickAndMortyEpisodes = 'https://rick-and-morty-production-9ae5.up.railway.app/episodes'
+import axios from 'axios';
 
+export const rickAndMortyCharacter = 'https://rickandmortyapi.com/api/character';
+export const rickAndMortyLocalizations = 'https://rickandmortyapi.com/api/location';
+export const rickAndMortyEpisodes = 'http://127.0.0.1:4200/episodes';
 
-export const fetchRickAndMorty = async (url:string) => {
-    return fetch(url).then(res=> res.json())
-}
-export const createRickAndMortFetch= async (url: string, { arg }:any) => {
-    return fetch(url, {
-        method: 'POST',
-        body: JSON.stringify(arg)
-    })
-}
+export const fetchRickAndMorty = async (url: string) => {
+    const response = await axios.get(url);
+    return response.data;
+};
 
-export const updateRickAndMortyFetch= async (url: string, { arg }:any) => {
-    return fetch(url, {
-        method: 'PATCH',
-        body: JSON.stringify(arg)
-    })
-}
+export const createRickAndMortFetch = async (url: string, { arg }: any) => {
+    const response = await axios.post(url, arg);
+    return response.data;
+};
+
+export const updateRickAndMortyFetch = async (url: string, { arg }: any) => {
+    const response = await axios.patch(url, arg);
+    return response.data;
+};
