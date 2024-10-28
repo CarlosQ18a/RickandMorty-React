@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const rickAndMortyCharacter = 'https://rickandmortyapi.com/api/character';
 export const rickAndMortyLocalizations = 'https://rickandmortyapi.com/api/location';
-export const rickAndMortyEpisodes = 'http://127.0.0.1:4200/episodes';
+export const rickAndMortyEpisodes = 'https://rickandmortyapi.com/api/episode';
 
 export const fetchRickAndMorty = async (url: string) => {
     const response = await axios.get(url);

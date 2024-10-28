@@ -30,6 +30,7 @@ const AntCard:React.FC<CardType> = ({name,image, description}:CardType) => (
             description={description}
         />
     </Card>
+    
 );
 
 export default AntCard;
